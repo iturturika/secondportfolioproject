@@ -136,3 +136,51 @@
   flex-direction: column;
   row-gap: 30px;
 }
+
+.team{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+}
+
+.team__button{
+  width: 264px;
+  height: 70px;
+  border: none;
+  background-color: $dark;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.testimonials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $dark;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  height: 600px;
+}
+
+.testimonial__scroll{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  overflow-x: hidden;
+}

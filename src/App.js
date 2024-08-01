@@ -19,8 +19,19 @@ import illustration_6 from './images/illustration_6.svg';
 import illustration_7 from './images/illustration_7.svg';
 import green_arrow from './images/arrow_icon.svg';
 import Guide from './components/Guide/Guide';
+import TeamMember from './components/TeamMember/TeamMember';
+import profile_img_1 from './images/profile-picture_1.svg';
+import profile_img_2 from './images/profile-picture_2.svg';
+import profile_img_3 from './images/profile-picture_3.svg';
+import profile_img_4 from './images/profile-picture_4.svg';
+import profile_img_5 from './images/profile-picture_5.svg';
+import profile_img_6 from './images/profile-picture_6.svg';
+import Testimonial from './components/Testimonial/Testimonial';
 
 function App() {
+  const [testimonials, setTestimonials] = React.useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const [currentIndex, setCurrentIndex] = React.useState(2);
+
   return (
     <main className="wrap">
       <Header />
@@ -168,13 +179,90 @@ function App() {
             'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.'
           }
         />
-
-        <Heading
-          title={'Team'}
+      </article>
+      <Heading
+        title={'Team'}
+        description={
+          'Meet the skilled and experienced team behind our successful digital marketing strategies'
+        }
+      />
+      <article className="team">
+        <TeamMember
+          img={profile_img_1}
+          name={'John Smith'}
+          role={'CEO and Founder'}
           description={
-            'Meet the skilled and experienced team behind our successful digital marketing strategies'
+            '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy'
           }
         />
+
+        <TeamMember
+          img={profile_img_2}
+          name={'Jane Doe'}
+          role={'Director of Operations'}
+          description={
+            '7+ years of experience in project management and team leadership. Strong organizational and communication skills'
+          }
+        />
+
+        <TeamMember
+          img={profile_img_3}
+          name={'Michael Brown'}
+          role={'Senior SEO Specialist'}
+          description={
+            '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization'
+          }
+        />
+
+        <TeamMember
+          img={profile_img_4}
+          name={'Emily Johnson'}
+          role={'PPC Manager'}
+          description={
+            '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis'
+          }
+        />
+
+        <TeamMember
+          img={profile_img_5}
+          name={'Brian Williams'}
+          role={'Social Media Specialist'}
+          description={
+            '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement'
+          }
+        />
+
+        <TeamMember
+          img={profile_img_6}
+          name={'Sarah Kim'}
+          role={'Content Creator'}
+          description={
+            '2+ years of experience in writing and editingilled in creating compelling, SEO-optimized content for various industries'
+          }
+        />
+        <button className="team__button">See all team</button>
+      </article>
+
+      <Heading
+        title={'Testimonials'}
+        description={
+          'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services'
+        }
+      />
+
+      <article className="testimonials">
+        <div className="testimonial__scroll">
+          {testimonials.map((item, i) => {
+            if (i === currentIndex || i === currentIndex + 1 || i === currentIndex + 2) {
+              return <Testimonial number={item} key={item} />;
+            }
+          })}
+        </div>
+
+        <div className="testimonial__slider">
+          <p style={{ color: '#fff', cursor: 'pointer' }}>{'<<<<'}</p>
+          <p style={{ color: '#fff', cursor: 'pointer' }}>{'>>>>'}</p>
+        </div>
       </article>
     </main>
   );

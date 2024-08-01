@@ -1,0 +1,52 @@
+@import '../../scss/colors.scss';
+
+.guide{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: $gray;
+  padding: 40px 60px 40px 60px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  border: 1px solid $dark;
+  border-bottom: 4px solid $dark;
+}
+
+.guide__heading{
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+}
+
+.guide__number{
+  font-weight: 500;
+  font-size: 60px;
+}
+
+.guide__button{
+  margin-left: auto;
+  margin-right: 0;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray;
+  border: 1px solid $dark;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.guide__separator{
+  width: 100%;
+  height: 1px;
+  background-color: $dark;
+}

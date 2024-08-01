@@ -1,0 +1,138 @@
+@import './colors.scss';
+
+.wrap{
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 140px;
+}
+
+.cta{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta__text{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  row-gap: 35px;
+}
+
+.cta__button{
+  width: 264px;
+  height: 70px;
+  border: none;
+  background-color: $dark;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+.contributors{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.offer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 60px;
+  background-color: $gray;
+  height: 350px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+}
+
+.offer__text{
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 50%;
+}
+
+.offer__button{
+  width: 264px;
+  height: 70px;
+  border: none;
+  background-color: $dark;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+.examples{
+  width: 100%;
+  display: flex;
+  column-gap: 64px;
+  align-items: center;
+  background-color: $dark;
+  height: 330px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  padding: 70px;
+  p{
+    color: $gray;
+  }
+}
+
+.example{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+}
+
+.example__button{
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  h4{
+    color: $green;
+  }
+}
+
+.example__separator{
+  height: 186px;
+  width: 2px;
+  background-color: $gray;
+}
+
+.guides{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}

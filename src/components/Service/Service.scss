@@ -1,0 +1,58 @@
+@import '../../scss/colors.scss';
+
+.service{
+  width: 600px;
+  height: 310px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  border: 1px solid $dark;
+  border-bottom: 4px solid $dark;
+  margin: 0;
+}
+
+.service__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  h3{
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.service__button{
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  cursor: pointer;
+  span{
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: $dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.service__img{
+  width: 50%;
+  height: auto;
+}

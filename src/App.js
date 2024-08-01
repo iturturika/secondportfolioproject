@@ -17,6 +17,7 @@ import illustration_4 from './images/illustration_4.svg';
 import illustration_5 from './images/illustration_5.svg';
 import illustration_6 from './images/illustration_6.svg';
 import illustration_7 from './images/illustration_7.svg';
+import illustration_8 from './images/illustration_8.svg';
 import green_arrow from './images/arrow_icon.svg';
 import Guide from './components/Guide/Guide';
 import TeamMember from './components/TeamMember/TeamMember';
@@ -27,9 +28,18 @@ import profile_img_4 from './images/profile-picture_4.svg';
 import profile_img_5 from './images/profile-picture_5.svg';
 import profile_img_6 from './images/profile-picture_6.svg';
 import Testimonial from './components/Testimonial/Testimonial';
+import arrow_right from './images/arrow_right.svg';
+import star from './images/star.svg';
+import star_green from './images/star_green.svg';
+import RadioButton from './components/RadioButton/RadioButton';
+import FormInput from './components/FormInput/FormInput';
+import logo_white from './images/logo_white.svg';
+import linkedin2 from './images/linkedin2.svg';
+import facebook from './images/facebook.svg';
+import twitter from './images/twitter.svg';
 
 function App() {
-  const [testimonials, setTestimonials] = React.useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const [testimonials, setTestimonials] = React.useState([1, 2, 3, 4, 5]);
   const [currentIndex, setCurrentIndex] = React.useState(2);
 
   return (
@@ -252,18 +262,103 @@ function App() {
 
       <article className="testimonials">
         <div className="testimonial__scroll">
-          {testimonials.map((item, i) => {
-            if (i === currentIndex || i === currentIndex + 1 || i === currentIndex + 2) {
-              return <Testimonial number={item} key={item} />;
-            }
-          })}
+          <Testimonial />
         </div>
 
         <div className="testimonial__slider">
-          <p style={{ color: '#fff', cursor: 'pointer' }}>{'<<<<'}</p>
-          <p style={{ color: '#fff', cursor: 'pointer' }}>{'>>>>'}</p>
+          {0 !== currentIndex ? (
+            <img
+              src={arrow_right}
+              alt="arrow_left"
+              className="arrow__left"
+              onClick={() => {
+                setCurrentIndex(currentIndex - 1);
+              }}
+            />
+          ) : (
+            <span style={{ width: '24px' }} />
+          )}
+          <div className="testimomial__stars">
+            {testimonials.map((item, index) => {
+              return (
+                <img
+                  src={currentIndex === index ? star_green : star}
+                  key={index}
+                  alt="star"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => {
+                    setCurrentIndex(index);
+                  }}
+                />
+              );
+            })}
+          </div>
+          {testimonials.length - 1 !== currentIndex ? (
+            <img
+              src={arrow_right}
+              alt="arrow_right"
+              className="arrow__right"
+              onClick={() => {
+                setCurrentIndex(currentIndex + 1);
+              }}
+            />
+          ) : (
+            <span style={{ width: '24px' }} />
+          )}
         </div>
       </article>
+      <Heading
+        title={'Contact Us'}
+        description={`Connect with Us: Let's Discuss Your Digital Marketing Needs`}
+      />
+      <article className="form">
+        <form>
+          <div className="radio-buttons">
+            <RadioButton text={'Say Hi'} />
+            <RadioButton text={'Get a Quote'} />
+          </div>
+          <FormInput label={'Name*'} placeholder={'Name'} />
+          <FormInput label={'Email*'} placeholder={'Email'} />
+          <FormInput label={'Message*'} placeholder={'Message'} height={'190px'} />
+          <button className="form__button">Send Message</button>
+        </form>
+        <img src={illustration_8} alt="illustration" height={'100%'} style={{ margin: 0 }} />
+      </article>
+
+      <footer>
+        <div className="footer__nav">
+          <img src={logo_white} alt="logo_white" className="logo" />
+          <div className="footer__nav__pages">
+            <p>About us</p>
+            <p>Services</p>
+            <p>Use Cases</p>
+            <p>Pricing</p>
+            <p>Blog</p>
+          </div>
+          <div className="footer__nav__socials">
+            <img src={linkedin2} alt="linkedin" />
+            <img src={facebook} alt="facebook" />
+            <img src={twitter} alt="twitter" />
+          </div>
+        </div>
+        <div className="footer__second-section">
+          <div className="footer__second-section__contacts">
+            <h4>Contact us:</h4>
+            <p>Email: info@positivus.com</p>
+            <p>Phone: 555-567-8901</p>
+            <p>Address: 1234 Main St Moonstone City, Stardust State 12345</p>
+          </div>
+          <div className="subscribe-to-news">
+            <input placeholder="Email" className="subscribe-to-news__input" />
+            <button className="subscribe-to-news__button">Subscribe to news</button>
+          </div>
+        </div>
+        <span className="footer__separator" />
+        <div className="footer__legal__info">
+          <p>© 2023 Positivus. All Rights Reserved.</p>
+          <a href="/">Privacy Policy</a>
+        </div>
+      </footer>
     </main>
   );
 }

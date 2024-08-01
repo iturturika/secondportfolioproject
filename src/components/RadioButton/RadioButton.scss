@@ -1,0 +1,34 @@
+@import '../../scss/colors.scss';
+
+.radio__button{
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.radio__button__border{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $dark;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio__button__circle{
+  width: 16px;
+  height: 16px;
+  background-color: $green;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

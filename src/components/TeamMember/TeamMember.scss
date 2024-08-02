@@ -27,3 +27,9 @@
   height: 1px;
   background-color: $dark;
 }
+
+@media screen and (max-width: 1240px) {
+  .team__member{
+    width: 350px;
+  }
+}

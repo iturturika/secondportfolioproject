@@ -50,3 +50,36 @@
   height: 1px;
   background-color: $dark;
 }
+
+@media screen and (max-width: 768px) {
+  .guide{
+    padding: 20px;
+  }
+
+  .guide__number{
+    font-size: 40px;
+  }
+
+  .guide__button{
+    min-width: 58px !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .guide__number{
+    font-size: 30px;
+  }
+
+  .guide__heading{
+    h3{font-size: 20px;}
+    column-gap: 0;
+    justify-content: space-between;
+  }
+
+  .guide__button{
+    min-width: 48px !important;
+    max-width: 48px !important;
+    height: 48px !important;
+    margin: 0;
+  }
+}

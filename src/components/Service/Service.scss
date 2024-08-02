@@ -56,3 +56,32 @@
   width: 50%;
   height: auto;
 }
+
+@media screen and (max-width: 1240px) {
+  .service{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service{
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .service{
+    flex-direction: column-reverse;
+    height: auto;
+    row-gap: 20px;
+
+  }
+  .service__img{
+    width: 100%;
+  }
+
+  .service__text{
+    width: 100%;
+    row-gap: 20px;
+  }
+}

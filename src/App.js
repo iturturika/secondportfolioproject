@@ -37,14 +37,58 @@ import logo_white from './images/logo_white.svg';
 import linkedin2 from './images/linkedin2.svg';
 import facebook from './images/facebook.svg';
 import twitter from './images/twitter.svg';
+import HeaderNav from './components/HeaderNav/HeaderNav';
 
 function App() {
-  const [testimonials, setTestimonials] = React.useState([1, 2, 3, 4, 5]);
-  const [currentIndex, setCurrentIndex] = React.useState(2);
+  const [testimonials, setTestimonials] = React.useState([
+    {
+      text: `We have been working with Positivus for the past year and have seen a significant
+          increase in website traffic and leads as a result of their efforts. The team is
+          professional, responsive, and truly cares about the success of our business. We highly
+          recommend Positivus to any company looking to grow their online presence.`,
+      name: 'John Smith',
+      role: 'Marketing CEO Agent',
+    },
+    {
+      text: `Get all have some text working with Positivus for the past year and have seen a significant
+          increase in website traffic and leads as a result of their efforts. The team is
+          professional, responsive, and truly cares about the success of our business. We highly
+          recommend Positivus to any company looking to grow their online presence.`,
+      name: 'Bob Smith',
+      role: 'Marketing CEO Agent',
+    },
+    {
+      text: `Some text have been working with Positivus for the past year and have seen a significant
+          increase in website traffic and leads as a result of their efforts. The team is
+          professional, responsive, and truly cares about the success of our business. We highly
+          recommend Positivus to any company looking to grow their online presence.`,
+      name: 'Jin Tiles',
+      role: 'IT CEO Agent',
+    },
+    {
+      text: `Another text for testimonial with Positivus for the past year and have seen a significant
+          increase in website traffic and leads as a result of their efforts. The team is
+          professional, responsive, and truly cares about the success of our business. We highly
+          recommend Positivus to any company looking to grow their online presence.`,
+      name: 'Alex Smith',
+      role: 'Marketing CEO Agent',
+    },
+  ]);
+  const [currentIndex, setCurrentIndex] = React.useState(1);
+  const [onClickBurgerMenu, setOnClickBurgerMenu] = React.useState(false);
 
   return (
     <main className="wrap">
-      <Header />
+      <div
+        className="burger-menu__overlay"
+        style={onClickBurgerMenu ? { top: 0 } : { top: '-100vh' }}
+      >
+        <HeaderNav
+          style={{ display: 'flex', flexDirection: 'column', rowGap: '20px' }}
+          setOnClickBurgerMenu={setOnClickBurgerMenu}
+        />
+      </div>
+      <Header setOnClickBurgerMenu={setOnClickBurgerMenu} onClickBurgerMenu={onClickBurgerMenu} />
       <article className="cta">
         <div className="cta__text">
           <h1>Navigating the digital landscape for success</h1>
@@ -262,7 +306,11 @@ function App() {
 
       <article className="testimonials">
         <div className="testimonial__scroll">
-          <Testimonial />
+          <Testimonial
+            text={testimonials[currentIndex].text}
+            name={testimonials[currentIndex].name}
+            role={testimonials[currentIndex].role}
+          />
         </div>
 
         <div className="testimonial__slider">

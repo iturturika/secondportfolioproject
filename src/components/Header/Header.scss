@@ -8,18 +8,6 @@ header{
   justify-content: space-between;
 }
 
-nav{
-  display: flex;
-  align-items: center;
-  column-gap: 40px;
-  a{
-    font-weight: 500;
-    font-size: 20px;
-  }
-  a:hover{
-    border-bottom: 2px solid $green;
-  }
-}
 
 .header__button{
   width: 231px;
@@ -39,4 +27,15 @@ nav{
 .header__button:hover{
   background-color: $dark;
   color: $green;
+}
+
+.burger-menu{
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .burger-menu{
+    display: flex;
+    width: 30px;
+  }
 }

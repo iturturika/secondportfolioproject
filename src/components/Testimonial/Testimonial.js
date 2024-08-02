@@ -1,21 +1,16 @@
 import React from 'react';
 import './Testimonial.scss';
 import msg_icon from '../../images/msg.svg';
-const Testimonial = () => {
+const Testimonial = ({ text, name, role }) => {
   return (
     <div className="testimonial">
       <div className="testimonial__text">
         <img src={msg_icon} alt="msg_icon" />
-        <p>
-          "We have been working with Positivus for the past year and have seen a significant
-          increase in website traffic and leads as a result of their efforts. The team is
-          professional, responsive, and truly cares about the success of our business. We highly
-          recommend Positivus to any company looking to grow their online presence."
-        </p>
+        <p>{text}</p>
       </div>
       <h4>
-        <span>John Smith</span>
-        Marketing Director at XYZ Corp
+        <span>{name}</span>
+        {role}
       </h4>
     </div>
   );

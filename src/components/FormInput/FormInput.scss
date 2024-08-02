@@ -25,3 +25,9 @@
     -o-border-radius: 14px;
   }
 }
+
+@media screen and (max-width: 1240px) {
+  .form__input{
+    width: 100%;
+  }
+}

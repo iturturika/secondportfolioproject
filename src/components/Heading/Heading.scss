@@ -16,3 +16,12 @@
     padding-right: 10px;
 }
 }
+
+@media screen and (max-width: 768px) {
+  .heading{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    row-gap: 20px;
+  }
+}
